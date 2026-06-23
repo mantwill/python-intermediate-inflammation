@@ -12,3 +12,9 @@
 *.pyc
 *.egg-info
 .pytest_cache
+
+# virtual env
+venv
+
+#os files
+.DS_Store
