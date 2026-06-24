@@ -38,8 +38,14 @@ def daily_max(data):
 
 def patient_normalise(data):
     """Normalise patient data from a 2D inflammation data array."""
-    max = np.max(data, axis=0)
-    return data / max[:, np.newaxis]
+    if not isinstance(data, np.ndarray):
+        raise TypeError('Data must be a Numpy array')
+    if data.ndim != 2:
+        raise ValueError('Data must be a 2D array')
+    if np.any(data < 0):
+        raise ValueError('Inflammation values should not be negative')
+    max_data = np.max(data, axis=1)
+    return data / max_data[:, np.newaxis]
 
 
 def daily_min(data):
