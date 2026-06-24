@@ -20,6 +20,5 @@ pyparsing==3.3.2
 pytest==9.1.1
 pytest-cov==7.1.0
 python-dateutil==2.9.0.post0
--e git+https://github.com/mantwill/python-intermediate-inflammation.git@197284cbf24e793da0c3815ad832ea88fd93ca67#egg=python_intermediate_inflammation
 six==1.17.0
 tomlkit==0.15.0
