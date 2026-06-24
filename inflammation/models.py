@@ -42,4 +42,6 @@ def daily_min(data):
     :param data: 2D Numpy array of inflammation data
     :returns: 1D Numpy array of daily min inflammation values
     """
-    return np.min(data, axis=0)
+    min_value = np.min(data, axis=0).astype(float)
+    min_value[min_value < 0] = np.nan
+    return min_value
