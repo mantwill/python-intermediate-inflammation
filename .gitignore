@@ -13,8 +13,5 @@
 *.egg-info
 .pytest_cache
 
-# virtual env
-venv
-
-#os files
+venv/
 .DS_Store
