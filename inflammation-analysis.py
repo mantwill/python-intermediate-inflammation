@@ -18,9 +18,19 @@ def main(args):
     infiles = args.infiles
     if not isinstance(infiles, list):
         infiles = [args.infiles]
+    
+
 
 
     if args.full_data_analysis:
+        _, extension = os.path.splitext(infiles[0])
+        if extension == '.json':
+            from inflammation.compute_data import JSONDataSource
+            data_source = JSONDataSource(os.path.dirname(infiles[0]))
+            data = data_source.load_inflammation_data()
+            analyze_data(data)
+
+
         analyse_data(os.path.dirname(infiles[0]))
         return
 

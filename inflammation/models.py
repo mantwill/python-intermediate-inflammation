@@ -8,6 +8,7 @@ and each column represents a single day across all patients.
 """
 
 import numpy as np
+from inflammation import models
 
 
 def load_csv(filename):  
@@ -31,6 +32,7 @@ def load_json(filename):
     ]
     :param filename: Filename of JSON to load
     """
+    
     with open(filename, 'r', encoding='utf-8') as file:
         data_as_json = json.load(file)
         return [np.array(entry['observations']) for entry in data_as_json]
@@ -50,3 +52,10 @@ def daily_min(data):
     """Calculate the daily min of a 2d inflammation data array."""
     return np.min(data, axis=0)
 
+
+def compute_standard_deviation_by_day(data):
+    means_by_day = map(models.daily_mean, data)
+    means_by_day_matrix = np.stack(list(means_by_day))
+
+    daily_standard_deviation = np.std(means_by_day_matrix, axis=0)
+    return daily_standard_deviation
