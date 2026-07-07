@@ -20,4 +20,4 @@ These failing tests set out the requirements for the additional code to be imple
 The tests should be run using `pytest`, which will be introduced during the workshop.
 
 
-![Continuous Integration build in GitHub Actions](https://github.com/mantwilm/python-intermediate-inflammation/actions/workflows/main.yml/badge.svg?branch=main)
+![Continuous Integration build in GitHub Actions](https://github.com/mantwill/python-intermediate-inflammation/actions/workflows/main.yml/badge.svg?branch=main)
