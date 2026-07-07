@@ -1,3 +1,5 @@
+# inflam
+
 # Introduction
 
 This is a template software project repository used by the [Intermediate Research Software Development Skills In Python](https://github.com/carpentries-incubator/python-intermediate-development).
@@ -16,3 +18,6 @@ Several tests have been implemented already, some of which are currently failing
 These failing tests set out the requirements for the additional code to be implemented during the workshop.
 
 The tests should be run using `pytest`, which will be introduced during the workshop.
+
+
+![Continuous Integration build in GitHub Actions](https://github.com/mantwilm/python-intermediate-inflammation/actions/workflows/main.yml/badge.svg?branch=main)
